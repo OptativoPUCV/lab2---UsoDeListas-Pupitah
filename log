@@ -286,3 +286,9 @@ exercises.c:143:28: error: called object is not a function or function pointer
       |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
 Compilation failed
 cdb09b9
+Sat 23 Mar 2024 08:48:42 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|0
+total_score: 70/70
+f319ff1
