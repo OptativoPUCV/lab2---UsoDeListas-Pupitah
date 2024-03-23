@@ -87,3 +87,30 @@ Wed 20 Mar 2024 09:12:08 PM UTC:
  tests:  4|1
 total_score: 50/70
 2341052
+Sat 23 Mar 2024 08:16:28 PM UTC: 
+ exercises.c | 25 +++++++++++++++++++++----
+ 1 file changed, 21 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:5: error: type of ‘charcadena’ defaults to ‘int’ [-Werror=implicit-int]
+  133 | int parentesisBalanceados(charcadena) {
+      |     ^~~~~~~~~~~~~~~~~~~~~
+exercises.c:135:21: error: ‘cadena’ undeclared (first use in this function); did you mean ‘charcadena’?
+  135 |     for (int i = 0; cadena[i] != '\0'; i++) {
+      |                     ^~~~~~
+      |                     charcadena
+exercises.c:135:21: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:136:29: error: expected ‘)’ before ‘cadena’
+  136 |         if (cadena[i] == '('  cadena[i] == '{'  cadena[i] == '[') {
+      |            ~                ^ ~~~~~~
+      |                             )
+exercises.c:138:36: error: expected ‘)’ before ‘cadena’
+  138 |         } else if (cadena[i] == ')'  cadena[i] == '}'  cadena[i] == ']') {
+      |                   ~                ^ ~~~~~~
+      |                                    )
+exercises.c:142:25: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  142 |             char last = (char)first(stack);
+      |                         ^
+cc1: all warnings being treated as errors
+Compilation failed
+262b994
