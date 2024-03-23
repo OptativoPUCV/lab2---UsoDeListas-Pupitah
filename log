@@ -180,3 +180,80 @@ exercises.c:143:30: error: called object is not a function or function pointer
 cc1: all warnings being treated as errors
 Compilation failed
 db66143
+Sat 23 Mar 2024 08:28:45 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:135:27: error: subscripted value is neither array nor pointer nor vector
+  135 |     for (int i = 0; cadena[i] != '\0'; i++) {
+      |                           ^
+exercises.c:136:19: error: subscripted value is neither array nor pointer nor vector
+  136 |         if (cadena[i] == '('  cadena[i] == '{'  cadena[i] == '[') {
+      |                   ^
+exercises.c:136:29: error: expected ‘)’ before ‘cadena’
+  136 |         if (cadena[i] == '('  cadena[i] == '{'  cadena[i] == '[') {
+      |            ~                ^ ~~~~~~
+      |                             )
+exercises.c:137:38: error: subscripted value is neither array nor pointer nor vector
+  137 |             pushFront(stack, &(cadena[i]));
+      |                                      ^
+exercises.c:138:26: error: subscripted value is neither array nor pointer nor vector
+  138 |         } else if (cadena[i] == ')'  cadena[i] == '}'  cadena[i] == ']') {
+      |                          ^
+exercises.c:138:36: error: expected ‘)’ before ‘cadena’
+  138 |         } else if (cadena[i] == ')'  cadena[i] == '}'  cadena[i] == ']') {
+      |                   ~                ^ ~~~~~~
+      |                                    )
+exercises.c:142:25: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  142 |             char last = (char)first(stack);
+      |                         ^
+exercises.c:143:39: error: subscripted value is neither array nor pointer nor vector
+  143 |             if ((last == '(' && cadena[i] == ')')  (last == '{' && cadena[i] == '}')  (last == '[' && cadena[i] == ']')) {
+      |                                       ^
+exercises.c:143:74: error: subscripted value is neither array nor pointer nor vector
+  143 |             if ((last == '(' && cadena[i] == ')')  (last == '{' && cadena[i] == '}')  (last == '[' && cadena[i] == ']')) {
+      |                                                                          ^
+exercises.c:143:109: error: subscripted value is neither array nor pointer nor vector
+  143 |             if ((last == '(' && cadena[i] == ')')  (last == '{' && cadena[i] == '}')  (last == '[' && cadena[i] == ']')) {
+      |                                                                                                             ^
+test.c: In function ‘test_parentesis_balanceados’:
+test.c:217:31: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  217 |     if(!parentesisBalanceados(s)){
+      |                               ^
+      |                               |
+      |                               char *
+In file included from test.c:5:
+exercises.c:133:32: note: expected ‘char’ but argument is of type ‘char *’
+  133 | int parentesisBalanceados(char cadena) {
+      |                           ~~~~~^~~~~~
+test.c:225:30: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  225 |     if(parentesisBalanceados(s)){
+      |                              ^
+      |                              |
+      |                              char *
+In file included from test.c:5:
+exercises.c:133:32: note: expected ‘char’ but argument is of type ‘char *’
+  133 | int parentesisBalanceados(char cadena) {
+      |                           ~~~~~^~~~~~
+test.c:233:31: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  233 |     if(!parentesisBalanceados(s)){
+      |                               ^
+      |                               |
+      |                               char *
+In file included from test.c:5:
+exercises.c:133:32: note: expected ‘char’ but argument is of type ‘char *’
+  133 | int parentesisBalanceados(char cadena) {
+      |                           ~~~~~^~~~~~
+test.c:241:30: error: passing argument 1 of ‘parentesisBalanceados’ makes integer from pointer without a cast [-Werror=int-conversion]
+  241 |     if(parentesisBalanceados(s)){
+      |                              ^
+      |                              |
+      |                              char *
+In file included from test.c:5:
+exercises.c:133:32: note: expected ‘char’ but argument is of type ‘char *’
+  133 | int parentesisBalanceados(char cadena) {
+      |                           ~~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+991438a
