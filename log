@@ -257,3 +257,22 @@ exercises.c:133:32: note: expected ‘char’ but argument is of type ‘char *�
 cc1: all warnings being treated as errors
 Compilation failed
 991438a
+Sat 23 Mar 2024 08:47:36 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:133:5: error: type of ‘charcadena’ defaults to ‘int’ [-Werror=implicit-int]
+  133 | int parentesisBalanceados(charcadena) {
+      |     ^~~~~~~~~~~~~~~~~~~~~
+exercises.c:135:19: error: ‘cadena’ undeclared (first use in this function); did you mean ‘charcadena’?
+  135 |   for (int i = 0; cadena[i] != '\0'; i++) {
+      |                   ^~~~~~
+      |                   charcadena
+exercises.c:135:19: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:142:23: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  142 |           char last = (char)first(stack);
+      |                       ^
+cc1: all warnings being treated as errors
+Compilation failed
+b318185
