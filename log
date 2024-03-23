@@ -276,3 +276,13 @@ exercises.c:142:23: error: cast from pointer to integer of different size [-Werr
 cc1: all warnings being treated as errors
 Compilation failed
 b318185
+Sat 23 Mar 2024 08:48:16 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:143:28: error: called object is not a function or function pointer
+  143 |           if ((last == '(' && cadena[i] == ')')  (last == '{' && cadena[i] == '}')  (last == '[' && cadena[i] == ']')) {
+      |               ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+Compilation failed
+cdb09b9
