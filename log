@@ -158,3 +158,25 @@ exercises.c:142:30: error: invalid use of incomplete typedef ‘List’
 cc1: all warnings being treated as errors
 Compilation failed
 c4f5f5c
+Sat 23 Mar 2024 08:28:39 PM UTC: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:136:29: error: expected ‘)’ before ‘cadena’
+  136 |         if (cadena[i] == '('  cadena[i] == '{'  cadena[i] == '[') {
+      |            ~                ^ ~~~~~~
+      |                             )
+exercises.c:138:36: error: expected ‘)’ before ‘cadena’
+  138 |         } else if (cadena[i] == ')'  cadena[i] == '}'  cadena[i] == ']') {
+      |                   ~                ^ ~~~~~~
+      |                                    )
+exercises.c:142:25: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+  142 |             char last = (char)first(stack);
+      |                         ^
+exercises.c:143:30: error: called object is not a function or function pointer
+  143 |             if ((last == '(' && cadena[i] == ')')  (last == '{' && cadena[i] == '}')  (last == '[' && cadena[i] == ']')) {
+      |                 ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+db66143
