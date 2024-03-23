@@ -136,3 +136,25 @@ exercises.c:143:30: error: called object is not a function or function pointer
 cc1: all warnings being treated as errors
 Compilation failed
 afb7368
+Sat 23 Mar 2024 08:28:29 PM UTC: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:137:36: error: passing argument 2 of ‘pushFront’ makes pointer from integer without a cast [-Werror=int-conversion]
+  137 |             pushFront(stack, cadena[i]);
+      |                              ~~~~~~^~~
+      |                                    |
+      |                                    char
+In file included from exercises.c:6,
+                 from test.c:5:
+arraylist.h:17:31: note: expected ‘void *’ but argument is of type ‘char’
+   17 | void pushFront(List *L, void *dato);
+      |                         ~~~~~~^~~~
+In file included from test.c:5:
+exercises.c:142:30: error: invalid use of incomplete typedef ‘List’
+  142 |             char last = stack->head->data;
+      |                              ^~
+cc1: all warnings being treated as errors
+Compilation failed
+c4f5f5c
